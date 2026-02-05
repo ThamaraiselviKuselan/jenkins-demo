@@ -1,20 +1,25 @@
 pipeline {
-  agent any
-  stages {
-    stage('Build') {
-      steps {
-        echo 'Build from Jenkinsfile'
-      }
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building the project'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing the project'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the project'
+            }
+        }
+        stage('Notify') {
+            steps {
+                echo 'Sending notification...'
+            }
+        }
     }
-    stage('Test') {
-      steps {
-        echo 'Test from Jenkinsfile'
-      }
-    }
-    stage('Deploy') {
-      steps {
-        echo 'Deploy from Jenkinsfile'
-      }
-    }
-  }
 }
