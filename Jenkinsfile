@@ -1,24 +1,22 @@
 pipeline {
     agent any
+
     stages {
         stage('Build') {
             steps {
-                echo 'Building the project'
+                echo 'Building from Jenkinsfile'
             }
         }
+
         stage('Test') {
             steps {
-                echo 'Testing the project'
+                echo 'Testing from Jenkinsfile'
             }
         }
+
         stage('Deploy') {
             steps {
-                echo 'Deploying the project'
-            }
-        }
-        stage('Notify') {
-            steps {
-                echo 'Sending notification...'
+                echo 'Deploying from Jenkinsfile'
             }
         }
     }
