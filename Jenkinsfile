@@ -4,20 +4,26 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building from Jenkinsfile'
+                echo 'Building app version 2'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Testing from Jenkinsfile'
+                echo 'Running improved test suite'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying from Jenkinsfile'
+                echo 'Deploying version 2'
             }
+        }
+    }
+
+    post {
+        success {
+            echo 'Deployment done successfully'
         }
     }
 }
